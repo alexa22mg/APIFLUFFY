@@ -24,8 +24,8 @@ public class CategoriaController {
     @PutMapping
     /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearCategoria", method = RequestMethod.POST)
-    public ResponseEntity<?> CrearCategoria(@RequestBody Categoria categoriao){
-        Categoria crearCategoria=this.categoriasService.CrearCategoria(categoriao);
+    public ResponseEntity<?> CrearCategoria(@RequestBody Categoria categoria){
+        Categoria crearCategoria=this.categoriasService.CrearCategoria(categoria);
         return ResponseEntity.status(HttpStatus.CREATED).body(crearCategoria);
     }
     @PutMapping

@@ -1,6 +1,8 @@
 package com.backendFlufy.demo.Model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -13,11 +15,17 @@ public class Especie {
     private Integer idEspecie;
     private String especie;
 
+    public Integer getIdEspecie() {
+        return idEspecie;
+    }
+
+    public void setIdEspecie(Integer idEspecie) {
+        this.idEspecie = idEspecie;
+    }
+
     public String getEspecie() {
         return especie;
     }
-    @OneToMany(mappedBy = "especie")
-    private List<Producto>productos;
 
     public void setEspecie(String especie) {
         this.especie = especie;

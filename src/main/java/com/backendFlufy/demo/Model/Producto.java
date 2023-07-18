@@ -148,12 +148,12 @@ public class Producto {
         this.precioVenta = precioVenta;
     }
 
-    public Categoria getCategoriaModel() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoriaModel(Categoria categoriaModel) {
-        this.categoria= categoriaModel;
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     public Especie getEspecie() {
