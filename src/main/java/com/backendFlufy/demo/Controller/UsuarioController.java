@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Flufy")
+@RequestMapping("/user")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
@@ -21,7 +21,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioList);
     }
     @PutMapping
-    /*Usamos este mapeo http:localhost:8080/Flufy/CrearUsuario para insertar datos*/
+    /*Usamos este mapeo http:localhost:8080/Flufy/CrearUsuario*/
     @RequestMapping(value = "CrearUsuario", method = RequestMethod.POST)
     public ResponseEntity<?> CrearUsuario(@RequestBody Usuario usuario){
         Usuario crearusuario=this.usuarioService.CrearUsuario(usuario);
