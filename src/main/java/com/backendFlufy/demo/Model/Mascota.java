@@ -21,7 +21,7 @@ public class Mascota {
     private String foto;
 
     @ManyToOne
-    @JoinColumn(name = "especie_id_especie", nullable = false)
+    @JoinColumn(name = "especie_id_especie",referencedColumnName = "id_especie")
     private Especie especie;
 
     @ManyToOne
