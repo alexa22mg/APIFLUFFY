@@ -1,12 +1,7 @@
 package com.backendFlufy.demo.Model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.Date;
-
-
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -23,6 +18,9 @@ public class Usuario {
     private String correo;
     @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
+
+    //// geter y setter
+
 
     public Integer getId() {
         return id;
