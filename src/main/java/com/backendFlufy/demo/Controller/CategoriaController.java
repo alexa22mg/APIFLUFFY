@@ -42,8 +42,8 @@ public class CategoriaController {
         return  ResponseEntity.ok(categoria);
     }
     @DeleteMapping
-    @RequestMapping(value = "EliminarProducto/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<?> EliminarProducto(@PathVariable int id){
+    @RequestMapping(value = "EliminarCategoria/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> EliminarCategoria(@PathVariable int id){
         this.categoriasService.EliminarCategoria(id);
         return ResponseEntity.ok().build();
     }

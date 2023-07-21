@@ -1,6 +1,5 @@
 package com.backendFlufy.demo.Controller;
 
-import com.backendFlufy.demo.Model.Cliente;
 import com.backendFlufy.demo.Model.Mascota;
 import com.backendFlufy.demo.Services.MascotaServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Peludos")
-public class MascotasRepository {
+public class MascotasController {
     @Autowired
     private MascotaServices mascotaServices;
 

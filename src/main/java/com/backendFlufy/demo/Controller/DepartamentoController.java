@@ -25,8 +25,8 @@ public class DepartamentoController {
     /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearDepartamento", method = RequestMethod.POST)
     public ResponseEntity<?> CrearDepartamento(@RequestBody Departamento departamento){
-        Departamento crearDepartamentoo=this.departamentoServices.CrearDepartamento(departamento);
-        return ResponseEntity.status(HttpStatus.CREATED).body(crearDepartamentoo);
+        Departamento crearDepartamento=this.departamentoServices.CrearDepartamento(departamento);
+        return ResponseEntity.status(HttpStatus.CREATED).body(crearDepartamento);
     }
     @PutMapping
     @RequestMapping(value = "ModificarDepartamento", method = RequestMethod.PUT)

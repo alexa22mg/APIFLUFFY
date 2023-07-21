@@ -35,7 +35,6 @@ public class UsuarioController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarUsuario/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarUsuario(@PathVariable int id) {
         Usuario usuario=this.usuarioService.BuscarUsuario(id);
         return  ResponseEntity.ok(usuario);
