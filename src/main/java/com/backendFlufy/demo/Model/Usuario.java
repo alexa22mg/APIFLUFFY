@@ -19,6 +19,8 @@ public class Usuario {
     @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
 
+    private String password;
+
     //// geter y setter
 
 
@@ -84,5 +86,13 @@ public class Usuario {
 
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
