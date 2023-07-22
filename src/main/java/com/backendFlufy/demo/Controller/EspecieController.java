@@ -1,8 +1,5 @@
 package com.backendFlufy.demo.Controller;
-
-import com.backendFlufy.demo.Model.Categoria;
 import com.backendFlufy.demo.Model.Especie;
-import com.backendFlufy.demo.Services.CategoriasService;
 import com.backendFlufy.demo.Services.EspecieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

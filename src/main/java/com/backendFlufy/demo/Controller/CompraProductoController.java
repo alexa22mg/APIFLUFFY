@@ -1,9 +1,6 @@
 package com.backendFlufy.demo.Controller;
-
-import com.backendFlufy.demo.Model.Compra;
 import com.backendFlufy.demo.Model.CompraProducto;
 import com.backendFlufy.demo.Services.CompraProductoServices;
-import com.backendFlufy.demo.Services.CompraServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +20,6 @@ public class CompraProductoController {
         return ResponseEntity.ok(compraProdutList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearCompraProducto", method = RequestMethod.POST)
     public ResponseEntity<?> CrearCompraProducto(@RequestBody CompraProducto compraProducto){
         CompraProducto crearCompraproducto=this.compraProductoServices.CrearCompraProducto(compraProducto);
@@ -37,7 +33,6 @@ public class CompraProductoController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarCompraProducto/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarCompraProducto(@PathVariable int id) {
         CompraProducto compraProduc =this.compraProductoServices.BuscarCompraProducto(id);
         return  ResponseEntity.ok(compraProduc);

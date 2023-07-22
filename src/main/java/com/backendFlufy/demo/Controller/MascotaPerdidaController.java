@@ -17,12 +17,11 @@ public class MascotaPerdidaController {
     private MascotaPerdidaService mascotaPerdidaService;
     @GetMapping
     @RequestMapping(value = "ConsultarMascotaPerdida", method = RequestMethod.GET)
-    public ResponseEntity<?> ConsultarCMascotaPerdida(){
+    public ResponseEntity<?> ConsultarMascotaPerdida(){
         List<MascotaPerdida> categoriaList =this.mascotaPerdidaService.ConsultarMascotaPerdida();
         return ResponseEntity.ok(categoriaList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearMascotaPerdida", method = RequestMethod.POST)
     public ResponseEntity<?> CrearMascotaPerdida(@RequestBody MascotaPerdida mascotaPerdida){
         MascotaPerdida crearMascotaPerdida=this.mascotaPerdidaService.CrearMascotaPerdida(mascotaPerdida);

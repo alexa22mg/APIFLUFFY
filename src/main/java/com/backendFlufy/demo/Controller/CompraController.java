@@ -23,7 +23,6 @@ public class CompraController {
         return ResponseEntity.ok(compraList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearCompra", method = RequestMethod.POST)
     public ResponseEntity<?> CrearCompra(@RequestBody Compra compra){
         Compra crearCompra=this.compraServices.CrearCompra(compra);
@@ -37,7 +36,6 @@ public class CompraController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarCompra/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarCompra(@PathVariable int id) {
         Compra compra =this.compraServices.BuscarCompra(id);
         return  ResponseEntity.ok(compra);

@@ -1,9 +1,6 @@
 package com.backendFlufy.demo.Controller;
-
 import com.backendFlufy.demo.Model.Categoria;
-import com.backendFlufy.demo.Model.Producto;
 import com.backendFlufy.demo.Services.CategoriasService;
-import com.backendFlufy.demo.Services.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +19,6 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearCategoria", method = RequestMethod.POST)
     public ResponseEntity<?> CrearCategoria(@RequestBody Categoria categoria){
         Categoria crearCategoria=this.categoriasService.CrearCategoria(categoria);
@@ -36,7 +32,6 @@ public class CategoriaController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarCategoria/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarCategoria(@PathVariable int id) {
         Categoria categoria =this.categoriasService.BuscarCategoria(id);
         return  ResponseEntity.ok(categoria);

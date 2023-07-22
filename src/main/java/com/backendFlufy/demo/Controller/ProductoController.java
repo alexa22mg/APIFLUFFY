@@ -21,7 +21,6 @@ public class ProductoController {
         return ResponseEntity.ok(productoList);
     }
     @PutMapping
-    /*Usamos este mapeo http:localhost:8080/Flufy/CrearUsuario para insertar datos*/
     @RequestMapping(value = "CrearProducto", method = RequestMethod.POST)
     public ResponseEntity<?> CrearProducto(@RequestBody Producto producto){
         Producto crearProducto =this.productoService.CrearProducto(producto);
@@ -35,7 +34,6 @@ public class ProductoController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarProducto/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarProducto(@PathVariable int id) {
         Producto producto =this.productoService.BuscarProducto(id);
         return  ResponseEntity.ok(producto);

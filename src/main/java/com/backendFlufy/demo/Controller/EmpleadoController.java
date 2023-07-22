@@ -1,6 +1,4 @@
 package com.backendFlufy.demo.Controller;
-
-import com.backendFlufy.demo.Model.Departamento;
 import com.backendFlufy.demo.Model.Empleado;
 import com.backendFlufy.demo.Services.EmpleadoServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +22,6 @@ public class EmpleadoController {
         return ResponseEntity.ok(empleadotList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearEmpleado", method = RequestMethod.POST)
     public ResponseEntity<?> CrearEmpleado(@RequestBody Empleado empleado){
         Empleado crearEmpleado=this.empleadoServices.CrearEmpleado(empleado);

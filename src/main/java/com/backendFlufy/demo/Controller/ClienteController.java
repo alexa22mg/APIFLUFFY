@@ -22,7 +22,6 @@ public class ClienteController {
         return ResponseEntity.ok(clienteList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearCliente", method = RequestMethod.POST)
     public ResponseEntity<?> CrearCliente(@RequestBody Cliente cliente){
         Cliente crearCliente=this.clienteServices.CrearCliente(cliente);
@@ -36,7 +35,6 @@ public class ClienteController {
     }
     @GetMapping
     @RequestMapping(value = "BuscarCliente/{id}", method = RequestMethod.GET)
-    /*La anotación @PatVariable nos ayuda a insertar una ruta*/
     public ResponseEntity<?> BuscarCliente(@PathVariable int id) {
         Cliente cliente =this.clienteServices.BuscarCliente(id);
         return  ResponseEntity.ok(cliente);

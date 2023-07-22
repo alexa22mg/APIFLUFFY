@@ -1,6 +1,4 @@
 package com.backendFlufy.demo.Controller;
-
-import com.backendFlufy.demo.Model.CompraProducto;
 import com.backendFlufy.demo.Model.Departamento;
 import com.backendFlufy.demo.Services.DepartamentoServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +20,6 @@ public class DepartamentoController {
         return ResponseEntity.ok(departamentotList);
     }
     @PutMapping
-    /*http:localhost:8080/Flufy/CrearUsuario para*/
     @RequestMapping(value = "CrearDepartamento", method = RequestMethod.POST)
     public ResponseEntity<?> CrearDepartamento(@RequestBody Departamento departamento){
         Departamento crearDepartamento=this.departamentoServices.CrearDepartamento(departamento);
