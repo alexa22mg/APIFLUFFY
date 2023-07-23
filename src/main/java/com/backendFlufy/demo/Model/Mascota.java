@@ -14,8 +14,8 @@ public class Mascota {
     private String nombre;
     @Column(name = "generro")
     private String genero;
-    private Float talla;
-    private Float peso;
+    private String talla;
+    private Double peso;
     @Column(name = "fecha_Nacimiento")
     private Date fechaNacimiento;
     private String foto;
@@ -57,19 +57,19 @@ public class Mascota {
         this.genero = genero;
     }
 
-    public Float getTalla() {
+    public String getTalla() {
         return talla;
     }
 
-    public void setTalla(Float talla) {
+    public void setTalla(String talla) {
         this.talla = talla;
     }
 
-    public Float getPeso() {
+    public Double getPeso() {
         return peso;
     }
 
-    public void setPeso(Float peso) {
+    public void setPeso(Double peso) {
         this.peso = peso;
     }
 
